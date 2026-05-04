@@ -14,7 +14,7 @@ const Index = () => (
     <LogisticsSection />
     <BookingCTA />
     <footer className="border-t border-border py-8 px-6 text-center text-muted-foreground text-xs">
-      © {new Date().getFullYear()} [YourCo]. All rights reserved.
+      © {new Date().getFullYear()} Action Call. All rights reserved.
     </footer>
   </main>
 );

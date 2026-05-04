@@ -1,6 +1,6 @@
 import dashboardImg from "@/assets/dashboard-workflow.jpg";
 import pipelineImg from "@/assets/data-pipeline.jpg";
-import { User, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const bullets = [
   "12+ years in applied AI/ML across fintech, logistics, and B2B SaaS",
@@ -21,17 +21,20 @@ const TrustSection = () => {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Profile */}
           <div>
-            <div className="w-full aspect-[4/3] rounded-xl border-2 border-dashed border-border bg-muted flex items-center justify-center mb-6">
-              <div className="text-center text-muted-foreground">
-                <User className="w-12 h-12 mx-auto mb-2 opacity-40" />
-                <p className="text-sm">Your Photo Here</p>
-              </div>
+            <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-border bg-muted mb-6">
+              <img
+                src="/consultant-portrait.svg"
+                alt="Stylized portrait graphic for Action Call principal consultant"
+                className="w-full h-full object-cover"
+                width={800}
+                height={600}
+              />
             </div>
             <h3 className="text-xl font-semibold text-foreground mb-1">
-              [Your Name]
+              Principal consultant
             </h3>
             <p className="text-muted-foreground text-sm mb-6">
-              Founder &amp; Lead Consultant — [YourCo]
+              Founding advisor — Action Call
             </p>
             <ul className="space-y-3">
               {bullets.map((b) => (
