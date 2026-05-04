@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const BookingCTA = () => {
   return (
-    <section id="book" className="px-6 py-32">
+    <section id="book" className="scroll-mt-20 px-6 py-32">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
           Ready to talk?

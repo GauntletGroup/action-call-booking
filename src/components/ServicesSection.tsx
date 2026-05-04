@@ -38,7 +38,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="px-6 py-24">
+    <section id="services" className="scroll-mt-20 px-6 py-24">
       <div className="max-w-5xl mx-auto">
         <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
           Services

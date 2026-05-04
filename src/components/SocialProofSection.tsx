@@ -24,7 +24,7 @@ const testimonials = [
 
 const SocialProofSection = () => {
   return (
-    <section className="px-6 py-24 bg-card/50">
+    <section id="results" className="scroll-mt-20 px-6 py-24 bg-card/50">
       <div className="max-w-5xl mx-auto">
         <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
           Results
