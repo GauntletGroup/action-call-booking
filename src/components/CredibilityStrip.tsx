@@ -2,7 +2,10 @@ import { Badge } from "@/components/ui/badge";
 
 const CredibilityStrip = () => {
   return (
-    <section className="px-6 pb-10">
+    <section className="px-6 pb-10" aria-labelledby="credibility-heading">
+      <h2 id="credibility-heading" className="sr-only">
+        At a glance
+      </h2>
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-2">

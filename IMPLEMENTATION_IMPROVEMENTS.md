@@ -82,10 +82,10 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Expand footer: year, brand, optional static links (email, LinkedIn, privacy policy URL if you have one hosted) | [ ] |
-| Align `NotFound` page colors/typography with main `background` / `foreground` tokens for brand consistency | [ ] |
-| 404: keep home link; optional secondary link to `#book` on main page | [ ] |
-| Replace or gate `console.error` in 404 if you prefer no client noise in production (optional polish) | [ ] |
+| Expand footer: year, brand, optional static links (email, LinkedIn, privacy policy URL if you have one hosted) | [x] |
+| Align `NotFound` page colors/typography with main `background` / `foreground` tokens for brand consistency | [x] |
+| 404: keep home link; optional secondary link to `#book` on main page | [x] |
+| Replace or gate `console.error` in 404 if you prefer no client noise in production (optional polish) | [x] |
 
 ---
 
@@ -95,10 +95,10 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Verify visible focus styles on buttons, links, and outline variants (do not rely on browser default only if it disappears on Tailwind reset) | [ ] |
-| Run a quick heading-order pass (`h1` in hero once; section `h2`; subheads `h3`) after any new blocks | [ ] |
-| Optional: `prefers-reduced-motion: reduce` for any scroll or entrance animations added later | [ ] |
-| Images: keep meaningful `alt` text; decorative images `alt=""` or CSS background as appropriate | [ ] |
+| Verify visible focus styles on buttons, links, and outline variants (do not rely on browser default only if it disappears on Tailwind reset) | [x] |
+| Run a quick heading-order pass (`h1` in hero once; section `h2`; subheads `h3`) after any new blocks | [x] |
+| Optional: `prefers-reduced-motion: reduce` for any scroll or entrance animations added later | [x] |
+| Images: keep meaningful `alt` text; decorative images `alt=""` or CSS background as appropriate | [x] |
 
 ---
 
@@ -122,8 +122,8 @@ Use this for a single glance at overall progress.
 - [x] Phase 2 — Header & navigation
 - [x] Phase 3 — CTAs & booking
 - [x] Phase 4 — Sections & hierarchy
-- [ ] Phase 5 — Footer & 404
-- [ ] Phase 6 — Accessibility & motion
+- [x] Phase 5 — Footer & 404
+- [x] Phase 6 — Accessibility & motion
 - [ ] Phase 7 — Performance & polish (optional)
 
 ---

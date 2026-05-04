@@ -24,7 +24,7 @@ const TrustSection = () => {
             <div className="w-full aspect-[4/3] rounded-xl overflow-hidden border border-border bg-muted mb-6">
               <img
                 src="/consultant-portrait.svg"
-                alt="Stylized portrait graphic for Action Call principal consultant"
+                alt=""
                 className="w-full h-full object-cover"
                 width={800}
                 height={600}

@@ -1,4 +1,4 @@
-const bookingEmail = "hello@example.com";
+export const bookingEmail = "hello@example.com";
 
 const bookingSubject = "Discovery call request";
 const bookingBody = [

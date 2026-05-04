@@ -32,7 +32,7 @@ const HeroSection = () => {
           </Button>
           <a
             href="#services"
-            className="text-muted-foreground hover:text-foreground transition-colors text-sm flex items-center gap-1.5"
+            className="text-muted-foreground hover:text-foreground transition-colors text-sm flex items-center gap-1.5 rounded-sm px-1 py-1 -mx-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             See Use Cases
             <ArrowDown className="w-3.5 h-3.5" />
