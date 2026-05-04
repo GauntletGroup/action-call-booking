@@ -20,14 +20,14 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Replace `[YourCo]` in footer and trust section with final company or personal brand name | [ ] |
-| Replace `[Your Name]` and title line in trust section with final copy | [ ] |
-| Add real headshot (or intentional illustration) and remove “Your Photo Here” placeholder state | [ ] |
-| Update `index.html`: `<title>`, default meta `description`, `author` | [ ] |
-| Update Open Graph: `og:title`, `og:description`, `og:image` (host a real image or use a canonical URL) | [ ] |
-| Update Twitter card meta to match (or remove if unused) | [ ] |
-| Add or verify `favicon` and app icon links in `index.html` | [ ] |
-| Review `lang` on `<html>`; keep `en` or set correctly | [ ] |
+| Replace `[YourCo]` in footer and trust section with final company or personal brand name | [x] |
+| Replace `[Your Name]` and title line in trust section with final copy | [x] |
+| Add real headshot (or intentional illustration) and remove “Your Photo Here” placeholder state | [x] |
+| Update `index.html`: `<title>`, default meta `description`, `author` | [x] |
+| Update Open Graph: `og:title`, `og:description`, `og:image` (host a real image or use a canonical URL) | [x] |
+| Update Twitter card meta to match (or remove if unused) | [x] |
+| Add or verify `favicon` and app icon links in `index.html` | [x] |
+| Review `lang` on `<html>`; keep `en` or set correctly | [x] |
 
 ---
 
@@ -37,11 +37,11 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Add a minimal header: logo/wordmark + primary nav links to in-page anchors (`#services`, `#results` or equivalent, `#book`) | [ ] |
-| Ensure anchor targets exist and IDs are stable across section refactors | [ ] |
-| Optional: sticky header on scroll with subtle background/blur for readability | [ ] |
-| Optional: compact “Book” control in header that matches final CTA styling | [ ] |
-| Keyboard: tab order through nav matches visual order; focus visible on all links | [ ] |
+| Add a minimal header: logo/wordmark + primary nav links to in-page anchors (`#services`, `#results` or equivalent, `#book`) | [x] |
+| Ensure anchor targets exist and IDs are stable across section refactors | [x] |
+| Optional: sticky header on scroll with subtle background/blur for readability | [x] |
+| Optional: compact “Book” control in header that matches final CTA styling | [x] |
+| Keyboard: tab order through nav matches visual order; focus visible on all links | [x] |
 
 ---
 
@@ -51,12 +51,12 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Remove `alert()` from booking; replace with link/button to Calendly, Cal.com, or similar (opens in new tab with `rel` as appropriate) | [ ] |
-| Until a scheduler exists: use `mailto:` with prefilled subject/body, or a single clear “Get in touch” target | [ ] |
-| Add optional short “After you book” copy under primary CTA (what to expect, timezone, duration) | [ ] |
-| Add a mid-page CTA block after high-trust sections (e.g. after testimonials)—single primary button, no duplicate long copy | [ ] |
+| Remove `alert()` from booking; replace with link/button to Calendly, Cal.com, or similar (opens in new tab with `rel` as appropriate) | [x] |
+| Until a scheduler exists: use `mailto:` with prefilled subject/body, or a single clear “Get in touch” target | [x] |
+| Add optional short “After you book” copy under primary CTA (what to expect, timezone, duration) | [x] |
+| Add a mid-page CTA block after high-trust sections (e.g. after testimonials)—single primary button, no duplicate long copy | [x] |
 | Optional: floating or sticky bottom “Book” bar on small viewports only | [ ] |
-| Align hero primary button, service card buttons, mid-page CTA, and final `#book` section on label + destination | [ ] |
+| Align hero primary button, service card buttons, mid-page CTA, and final `#book` section on label + destination | [x] |
 
 ---
 
@@ -66,12 +66,12 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Introduce one “credibility strip” or stats row (e.g. after hero): metrics, logos-as-text, or one-line proof—static content is fine | [ ] |
+| Introduce one “credibility strip” or stats row (e.g. after hero): metrics, logos-as-text, or one-line proof—static content is fine | [x] |
 | Optional: step timeline for engagement (“Discover → Scope → Build → Handoff”)—layout-only, can live in or near Logistics | [ ] |
-| Services: reduce icon repetition or assign distinct metaphors per offering | [ ] |
-| Optional: visually distinguish one flagship service (border, span, or subtle emphasis) if product strategy allows | [ ] |
+| Services: reduce icon repetition or assign distinct metaphors per offering | [x] |
+| Optional: visually distinguish one flagship service (border, span, or subtle emphasis) if product strategy allows | [x] |
 | Trust section: if photo is still light, lead with bullets/metrics or reorder so imagery + proof carry the first screen | [ ] |
-| Social proof: strengthen cards—e.g. outcome headline + quote, or a single stat callout per card (content still static) | [ ] |
+| Social proof: strengthen cards—e.g. outcome headline + quote, or a single stat callout per card (content still static) | [x] |
 | Optional: Embla carousel for testimonials on mobile if cards feel cramped | [ ] |
 
 ---
@@ -118,9 +118,9 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 Use this for a single glance at overall progress.
 
-- [ ] Phase 1 — Branding & metadata
-- [ ] Phase 2 — Header & navigation
-- [ ] Phase 3 — CTAs & booking
+- [x] Phase 1 — Branding & metadata
+- [x] Phase 2 — Header & navigation
+- [x] Phase 3 — CTAs & booking
 - [ ] Phase 4 — Sections & hierarchy
 - [ ] Phase 5 — Footer & 404
 - [ ] Phase 6 — Accessibility & motion

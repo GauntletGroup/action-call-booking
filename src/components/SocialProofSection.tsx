@@ -4,18 +4,21 @@ import remoteCollabImg from "@/assets/remote-collab.jpg";
 const testimonials = [
   {
     quote: "Reduced our ops processing time by 40% in the first sprint. No fluff, just results.",
+    outcome: "40% faster ops processing",
     name: "James K.",
     title: "VP Operations",
     company: "Series B FinTech, 120 employees",
   },
   {
     quote: "First external consultant who actually shipped production code alongside our team.",
+    outcome: "Production code shipped in sprint 1",
     name: "Priya M.",
     title: "Head of Engineering",
     company: "B2B SaaS, 200 employees",
   },
   {
     quote: "Helped us avoid a £300k vendor lock-in by building the right pipeline in-house.",
+    outcome: "Avoided £300k vendor lock-in",
     name: "Tom R.",
     title: "CTO",
     company: "Logistics Platform, 85 employees",
@@ -38,7 +41,12 @@ const SocialProofSection = () => {
               key={t.name}
               className="border border-border rounded-xl p-6 bg-card"
             >
-              <Quote className="w-5 h-5 text-primary/40 mb-4" />
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <span className="text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                  {t.outcome}
+                </span>
+                <Quote className="w-5 h-5 text-primary/40 shrink-0" />
+              </div>
               <p className="text-foreground text-sm leading-relaxed mb-6">
                 "{t.quote}"
               </p>

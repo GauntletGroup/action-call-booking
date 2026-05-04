@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Clock, Globe, Zap } from "lucide-react";
+import { BadgeCheck, Database, Radar, Workflow } from "lucide-react";
+import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
 
 const services = [
   {
@@ -8,7 +9,7 @@ const services = [
     delivery: "Remote Advisory",
     length: "2-week sprint",
     slots: "3 slots this month",
-    icon: Zap,
+    icon: Radar,
   },
   {
     name: "AI Workflow Deployment",
@@ -16,7 +17,8 @@ const services = [
     delivery: "Embedded Implementation",
     length: "4–8 week engagement",
     slots: "2 slots this month",
-    icon: Globe,
+    icon: Workflow,
+    flagship: true,
   },
   {
     name: "Data Pipeline Architecture",
@@ -24,7 +26,7 @@ const services = [
     delivery: "Embedded Implementation",
     length: "6–12 week engagement",
     slots: "1 slot this month",
-    icon: Clock,
+    icon: Database,
   },
   {
     name: "AI Strategy Retainer",
@@ -32,7 +34,7 @@ const services = [
     delivery: "Remote Advisory",
     length: "Ongoing retainer",
     slots: "2 slots this month",
-    icon: Zap,
+    icon: BadgeCheck,
   },
 ];
 
@@ -54,10 +56,29 @@ const ServicesSection = () => {
           {services.map((s) => (
             <div
               key={s.name}
-              className="border border-border rounded-xl p-6 bg-card hover:border-primary/40 transition-colors flex flex-col"
+              className={[
+                "border border-border rounded-xl p-6 bg-card hover:border-primary/40 transition-colors flex flex-col",
+                s.flagship ? "border-primary/30 bg-primary/5" : "",
+              ].join(" ")}
             >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-lg font-semibold text-foreground">{s.name}</h3>
+              <div className="flex items-start justify-between mb-4 gap-4">
+                <div className="flex items-start gap-3">
+                  <span
+                    className={[
+                      "mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-background",
+                      s.flagship ? "border-primary/30 bg-primary/10" : "",
+                    ].join(" ")}
+                    aria-hidden="true"
+                  >
+                    <s.icon className="h-4 w-4 text-primary" />
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">{s.name}</h3>
+                    {s.flagship ? (
+                      <p className="text-xs text-muted-foreground">Most popular for teams ready to ship</p>
+                    ) : null}
+                  </div>
+                </div>
                 <span className="text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full whitespace-nowrap">
                   {s.slots}
                 </span>
@@ -72,7 +93,7 @@ const ServicesSection = () => {
                 </span>
               </div>
               <Button asChild variant="outline" size="sm" className="w-full">
-                <a href="#book">Book Call</a>
+                <a href={bookingMailto}>{primaryCtaLabel}</a>
               </Button>
             </div>
           ))}

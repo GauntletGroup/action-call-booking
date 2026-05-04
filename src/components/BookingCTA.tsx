@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
 
 const BookingCTA = () => {
   return (
@@ -11,15 +12,15 @@ const BookingCTA = () => {
           30 minutes. No pitch deck. We'll assess fit, scope the problem, and
           outline next steps — or tell you we're not the right partner.
         </p>
-        <Button
-          size="lg"
-          className="text-base px-10 py-6 rounded-lg font-semibold"
-          onClick={() => alert("Booking placeholder — connect your Calendly or Cal.com link here.")}
-        >
-          Book Your Discovery Call
+        <Button asChild size="lg" className="text-base px-10 py-6 rounded-lg font-semibold">
+          <a href={bookingMailto}>{primaryCtaLabel}</a>
         </Button>
-        <p className="text-muted-foreground/50 text-xs mt-6">
-          Typically responds within 24 hours. EU timezone.
+        <p className="text-muted-foreground text-sm mt-6 max-w-md mx-auto">
+          After you reach out, you will get a reply within 24 hours with next-step questions and
+          a few time options for a 30-minute call.
+        </p>
+        <p className="text-muted-foreground/50 text-xs mt-3">
+          Typical calls run 30 minutes. EU timezone.
         </p>
       </div>
     </section>

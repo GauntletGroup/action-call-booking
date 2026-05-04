@@ -1,8 +1,10 @@
 import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
+import CredibilityStrip from "@/components/CredibilityStrip";
 import ServicesSection from "@/components/ServicesSection";
 import TrustSection from "@/components/TrustSection";
 import SocialProofSection from "@/components/SocialProofSection";
+import MidPageCTA from "@/components/MidPageCTA";
 import LogisticsSection from "@/components/LogisticsSection";
 import BookingCTA from "@/components/BookingCTA";
 
@@ -11,9 +13,11 @@ const Index = () => (
     <SiteHeader />
     <main id="main-content" className="min-h-screen bg-background text-foreground">
       <HeroSection />
+      <CredibilityStrip />
       <ServicesSection />
       <TrustSection />
       <SocialProofSection />
+      <MidPageCTA />
       <LogisticsSection />
       <BookingCTA />
       <footer className="border-t border-border py-8 px-6 text-center text-muted-foreground text-xs">
