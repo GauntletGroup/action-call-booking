@@ -46,6 +46,8 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 210 40% 90%;
     --sidebar-border: 222 20% 18%;
     --sidebar-ring: 217 91% 60%;
+
+    --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   }
 }
 
@@ -55,7 +57,165 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* App shell: layered glows + grid (content stacks above via .app-content) */
+.app-atmosphere {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(ellipse 100% 70% at 50% -30%, hsl(var(--primary) / 0.28), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 110% 25%, hsl(199 90% 48% / 0.14), transparent 50%),
+    radial-gradient(ellipse 45% 35% at -10% 60%, hsl(262 83% 58% / 0.1), transparent 45%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(222 47% 5%) 100%);
+}
+
+.app-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 35%, black 20%, transparent 75%);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.app-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 120%, hsl(var(--primary) / 0.12), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-atmosphere--motion::after {
+    animation: app-atmosphere-pulse 14s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes app-atmosphere-pulse {
+  0% {
+    opacity: 0.65;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.06) translateY(-1.5%);
+  }
+}
+
+/* Gradient text utility */
+.text-gradient-primary {
+  background: linear-gradient(
+    120deg,
+    hsl(var(--foreground)) 0%,
+    hsl(var(--foreground)) 35%,
+    hsl(var(--primary)) 55%,
+    hsl(199 95% 65%) 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Primary CTA glow (used on hero / key buttons) */
+.btn-glow-primary {
+  box-shadow:
+    0 0 0 1px hsl(var(--primary) / 0.35),
+    0 12px 40px -12px hsl(var(--primary) / 0.55);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+
+.btn-glow-primary:hover {
+  box-shadow:
+    0 0 0 1px hsl(var(--primary) / 0.5),
+    0 18px 50px -10px hsl(var(--primary) / 0.65);
+  transform: translateY(-1px);
+}
+
+/* Card lift + border glow on hover */
+.card-energy {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card-energy:hover {
+  transform: translateY(-3px);
+  border-color: hsl(var(--primary) / 0.35);
+  box-shadow:
+    0 18px 40px -24px hsl(222 47% 2% / 0.9),
+    0 0 0 1px hsl(var(--primary) / 0.12),
+    0 0 48px -18px hsl(var(--primary) / 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-glow-primary:hover {
+    transform: none;
+  }
+
+  .card-energy:hover {
+    transform: none;
+  }
+}
+
+/* Hero entrance (reduced motion: no animation) */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-enter {
+    animation: hero-enter-up 0.75s ease backwards;
+  }
+
+  .hero-enter-1 {
+    animation-delay: 0.05s;
+  }
+  .hero-enter-2 {
+    animation-delay: 0.12s;
+  }
+  .hero-enter-3 {
+    animation-delay: 0.2s;
+  }
+  .hero-enter-4 {
+    animation-delay: 0.28s;
+  }
+  .hero-enter-5 {
+    animation-delay: 0.36s;
+  }
+}
+
+@keyframes hero-enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-enter-1,
+  .hero-enter-2,
+  .hero-enter-3,
+  .hero-enter-4,
+  .hero-enter-5 {
+    animation: none !important;
   }
 }
 

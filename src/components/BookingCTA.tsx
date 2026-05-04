@@ -4,15 +4,19 @@ import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
 const BookingCTA = () => {
   return (
     <section id="book" className="scroll-mt-20 px-6 py-32">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+      <div className="mx-auto max-w-2xl rounded-2xl border border-primary/20 bg-gradient-to-b from-card/90 to-card/40 px-6 py-12 text-center shadow-[0_24px_70px_-30px_hsl(var(--primary)/0.25)] backdrop-blur-sm sm:px-10">
+        <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">
           Ready to talk?
         </h2>
-        <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
+        <p className="mx-auto mb-10 max-w-lg text-muted-foreground">
           30 minutes. No pitch deck. We'll assess fit, scope the problem, and
           outline next steps — or tell you we're not the right partner.
         </p>
-        <Button asChild size="lg" className="text-base px-10 py-6 rounded-lg font-semibold">
+        <Button
+          asChild
+          size="lg"
+          className="btn-glow-primary rounded-xl px-10 py-6 text-base font-semibold"
+        >
           <a href={bookingMailto}>{primaryCtaLabel}</a>
         </Button>
         <p className="text-muted-foreground text-sm mt-6 max-w-md mx-auto">

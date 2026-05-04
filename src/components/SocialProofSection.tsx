@@ -39,7 +39,7 @@ const SocialProofSection = () => {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="border border-border rounded-xl p-6 bg-card"
+              className="card-energy rounded-xl border border-border bg-card p-6"
             >
               <div className="flex items-start justify-between gap-4 mb-4">
                 <span className="text-[11px] font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">
@@ -61,7 +61,7 @@ const SocialProofSection = () => {
         <img
           src={remoteCollabImg}
           alt="Remote team collaboration workspace with async tools and project management"
-          className="rounded-xl border border-border w-full max-w-3xl mx-auto"
+          className="mx-auto w-full max-w-3xl rounded-xl border border-border shadow-[0_20px_50px_-24px_hsl(var(--primary)/0.2)]"
           loading="lazy"
           decoding="async"
           fetchPriority="low"

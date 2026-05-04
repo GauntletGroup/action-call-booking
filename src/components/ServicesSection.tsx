@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Database, Radar, Workflow } from "lucide-react";
 import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
+import { cn } from "@/lib/utils";
 
 const services = [
   {
@@ -56,10 +57,10 @@ const ServicesSection = () => {
           {services.map((s) => (
             <div
               key={s.name}
-              className={[
-                "border border-border rounded-xl p-6 bg-card hover:border-primary/40 transition-colors flex flex-col",
-                s.flagship ? "border-primary/30 bg-primary/5" : "",
-              ].join(" ")}
+              className={cn(
+                "card-energy flex flex-col rounded-xl border border-border bg-card p-6",
+                s.flagship && "border-primary/35 bg-gradient-to-br from-primary/10 to-card",
+              )}
             >
               <div className="flex items-start justify-between mb-4 gap-4">
                 <div className="flex items-start gap-3">
