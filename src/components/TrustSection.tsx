@@ -28,6 +28,8 @@ const TrustSection = () => {
                 className="w-full h-full object-cover"
                 width={800}
                 height={600}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <h3 className="text-xl font-semibold text-foreground mb-1">
@@ -52,6 +54,8 @@ const TrustSection = () => {
               alt="AI-driven workflow automation dashboard showing operational KPIs and pipeline status"
               className="rounded-xl border border-border w-full"
               loading="lazy"
+              decoding="async"
+              fetchPriority="low"
               width={1280}
               height={720}
             />
@@ -60,6 +64,8 @@ const TrustSection = () => {
               alt="Automated data pipeline architecture with ETL nodes and system integrations"
               className="rounded-xl border border-border w-full"
               loading="lazy"
+              decoding="async"
+              fetchPriority="low"
               width={1280}
               height={720}
             />

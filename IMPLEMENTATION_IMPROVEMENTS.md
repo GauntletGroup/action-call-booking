@@ -108,9 +108,9 @@ This document turns the brainstormed frontend improvements into an ordered imple
 
 | Task | Done |
 |------|------|
-| Confirm large hero/section images use appropriate dimensions and `loading="lazy"` where below the fold (hero may stay eager) | [ ] |
-| Optional: light scroll-reveal on sections (respect reduced motion) | [ ] |
-| Optional: preload only critical font/assets if you add custom fonts later | [ ] |
+| Confirm large hero/section images use appropriate dimensions and `loading="lazy"` where below the fold (hero may stay eager) | [x] |
+| Optional: light scroll-reveal on sections (respect reduced motion) | [x] |
+| Optional: preload only critical font/assets if you add custom fonts later | [x] |
 
 ---
 
@@ -124,7 +124,7 @@ Use this for a single glance at overall progress.
 - [x] Phase 4 — Sections & hierarchy
 - [x] Phase 5 — Footer & 404
 - [x] Phase 6 — Accessibility & motion
-- [ ] Phase 7 — Performance & polish (optional)
+- [x] Phase 7 — Performance & polish (optional)
 
 ---
 

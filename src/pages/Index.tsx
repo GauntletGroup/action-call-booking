@@ -7,6 +7,7 @@ import SocialProofSection from "@/components/SocialProofSection";
 import MidPageCTA from "@/components/MidPageCTA";
 import LogisticsSection from "@/components/LogisticsSection";
 import BookingCTA from "@/components/BookingCTA";
+import RevealBelowFold from "@/components/RevealBelowFold";
 import { bookingEmail } from "@/lib/booking";
 
 const Index = () => (
@@ -15,12 +16,24 @@ const Index = () => (
     <main id="main-content" className="min-h-screen bg-background text-foreground">
       <HeroSection />
       <CredibilityStrip />
-      <ServicesSection />
-      <TrustSection />
-      <SocialProofSection />
-      <MidPageCTA />
-      <LogisticsSection />
-      <BookingCTA />
+      <RevealBelowFold>
+        <ServicesSection />
+      </RevealBelowFold>
+      <RevealBelowFold>
+        <TrustSection />
+      </RevealBelowFold>
+      <RevealBelowFold>
+        <SocialProofSection />
+      </RevealBelowFold>
+      <RevealBelowFold>
+        <MidPageCTA />
+      </RevealBelowFold>
+      <RevealBelowFold>
+        <LogisticsSection />
+      </RevealBelowFold>
+      <RevealBelowFold>
+        <BookingCTA />
+      </RevealBelowFold>
       <footer className="border-t border-border px-6 py-8 text-xs text-muted-foreground">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>© {new Date().getFullYear()} Action Call. All rights reserved.</p>

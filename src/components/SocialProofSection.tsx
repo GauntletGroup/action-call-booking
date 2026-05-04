@@ -63,6 +63,8 @@ const SocialProofSection = () => {
           alt="Remote team collaboration workspace with async tools and project management"
           className="rounded-xl border border-border w-full max-w-3xl mx-auto"
           loading="lazy"
+          decoding="async"
+          fetchPriority="low"
           width={1280}
           height={720}
         />
