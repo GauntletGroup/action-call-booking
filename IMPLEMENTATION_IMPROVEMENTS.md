@@ -121,7 +121,7 @@ Use this for a single glance at overall progress.
 - [x] Phase 1 — Branding & metadata
 - [x] Phase 2 — Header & navigation
 - [x] Phase 3 — CTAs & booking
-- [ ] Phase 4 — Sections & hierarchy
+- [x] Phase 4 — Sections & hierarchy
 - [ ] Phase 5 — Footer & 404
 - [ ] Phase 6 — Accessibility & motion
 - [ ] Phase 7 — Performance & polish (optional)
