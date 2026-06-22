@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Database, Radar, Workflow } from "lucide-react";
-import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
+import { bookingAnchor, primaryCtaLabel } from "@/lib/booking";
 import { cn } from "@/lib/utils";
 
 const services = [
@@ -94,7 +94,7 @@ const ServicesSection = () => {
                 </span>
               </div>
               <Button asChild variant="outline" size="sm" className="w-full">
-                <a href={bookingMailto}>{primaryCtaLabel}</a>
+                <a href={bookingAnchor}>{primaryCtaLabel}</a>
               </Button>
             </div>
           ))}

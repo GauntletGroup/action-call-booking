@@ -6,7 +6,7 @@ import TrustSection from "@/components/TrustSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import MidPageCTA from "@/components/MidPageCTA";
 import LogisticsSection from "@/components/LogisticsSection";
-import BookingCTA from "@/components/BookingCTA";
+import RoadmapSection from "@/components/RoadmapSection";
 import RevealBelowFold from "@/components/RevealBelowFold";
 import { bookingEmail } from "@/lib/booking";
 
@@ -40,7 +40,7 @@ const Index = () => (
           <LogisticsSection />
         </RevealBelowFold>
         <RevealBelowFold>
-          <BookingCTA />
+          <RoadmapSection />
         </RevealBelowFold>
         <footer className="border-t border-border px-6 py-8 text-xs text-muted-foreground">
           <div className="mx-auto flex max-w-6xl flex-col gap-3 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">

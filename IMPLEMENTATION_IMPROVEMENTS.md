@@ -53,6 +53,7 @@ This document turns the brainstormed frontend improvements into an ordered imple
 |------|------|
 | Remove `alert()` from booking; replace with link/button to Calendly, Cal.com, or similar (opens in new tab with `rel` as appropriate) | [x] |
 | Until a scheduler exists: use `mailto:` with prefilled subject/body, or a single clear “Get in touch” target | [x] |
+| Primary booking funnel posts to n8n via Vercel `/api/submit-lead` (questionnaire + GDPR lead form at `#book`) | [x] |
 | Add optional short “After you book” copy under primary CTA (what to expect, timezone, duration) | [x] |
 | Add a mid-page CTA block after high-trust sections (e.g. after testimonials)—single primary button, no duplicate long copy | [x] |
 | Optional: floating or sticky bottom “Book” bar on small viewports only | [ ] |
@@ -130,5 +131,5 @@ Use this for a single glance at overall progress.
 
 ## Notes
 
-- **Blocked items:** Calendar URL, final copy, headshot, and legal pages are common blockers; keep mailto or a simple contact link until unblocked.
-- **No backend required:** External schedulers, static privacy PDFs, and mailto all satisfy “frontend only.”
+- **Blocked items:** Calendar URL, final copy, headshot, and legal pages are common blockers; the booking funnel now uses n8n via a Vercel API proxy (see `implementation/N8N_WEBHOOK_PLAN.md`).
+- **Backend note:** A thin Vercel serverless route handles lead submission; the rest of the site remains static.

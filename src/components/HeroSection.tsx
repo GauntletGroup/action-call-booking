@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
+import { bookingAnchor, primaryCtaLabel } from "@/lib/booking";
 
 const HeroSection = () => {
   return (
@@ -33,7 +33,7 @@ const HeroSection = () => {
               size="lg"
               className="btn-glow-primary text-base rounded-xl px-8 py-6 font-semibold"
             >
-              <a href={bookingMailto}>{primaryCtaLabel}</a>
+              <a href={bookingAnchor}>{primaryCtaLabel}</a>
             </Button>
             <a
               href="#services"

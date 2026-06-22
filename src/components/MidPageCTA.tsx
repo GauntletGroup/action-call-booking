@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { bookingMailto, primaryCtaLabel } from "@/lib/booking";
+import { bookingAnchor, primaryCtaLabel } from "@/lib/booking";
 
 const MidPageCTA = () => {
   return (
@@ -21,7 +21,7 @@ const MidPageCTA = () => {
             size="lg"
             className="btn-glow-primary rounded-xl px-8 py-6 text-base font-semibold"
           >
-            <a href={bookingMailto}>{primaryCtaLabel}</a>
+            <a href={bookingAnchor}>{primaryCtaLabel}</a>
           </Button>
         </div>
       </div>
