@@ -183,23 +183,23 @@ Work in order. Check boxes as you complete each item.
 
 | Task | Done |
 |------|------|
-| Create n8n workflow with Webhook trigger (POST, JSON) | [ ] |
-| Note webhook URL; enable Header Auth if using secret | [ ] |
-| Add env vars in Vercel (and local `.env.local` for dev) | [ ] |
-| Decide final questionnaire questions + `answers` key names | [ ] |
-| Draft privacy policy content for `/privacy` | [ ] |
+| Create n8n workflow with Webhook trigger (POST, JSON) | [x] |
+| Note webhook URL; enable Header Auth if using secret | [x] |
+| Add env vars in Vercel (and local `.env.local` for dev) | [x] |
+| Decide final questionnaire questions + `answers` key names | [x] |
+| Draft privacy policy content for `/privacy` | [x] |
 
 ### Phase 1 — Vercel API proxy
 
 | Task | Done |
 |------|------|
-| Add `api/submit-lead.ts` (Vercel serverless function) | [ ] |
-| Add `vercel.json` — SPA rewrites so React routes work alongside `/api/*` | [ ] |
-| Validate body with zod (names, email, `gdprConsent === true`, answers object) | [ ] |
-| Reject honeypot submissions with silent success or 400 (pick one strategy) | [ ] |
-| `POST` to `process.env.N8N_WEBHOOK_URL` with timeout (~10s) | [ ] |
-| Return `{ ok: true }` on success; generic error message on failure (no n8n internals leaked) | [ ] |
-| Set CORS: same-origin only (or `ALLOWED_ORIGIN` for preview deploys) | [ ] |
+| Add `api/submit-lead.ts` (Vercel serverless function) | [x] |
+| Add `vercel.json` — SPA rewrites so React routes work alongside `/api/*` | [x] |
+| Validate body with zod (names, email, `gdprConsent === true`, answers object) | [x] |
+| Reject honeypot submissions with silent success or 400 (pick one strategy) | [x] |
+| `POST` to `process.env.N8N_WEBHOOK_URL` with timeout (~10s) | [x] |
+| Return `{ ok: true }` on success; generic error message on failure (no n8n internals leaked) | [x] |
+| Set CORS: same-origin only (or `ALLOWED_ORIGIN` for preview deploys) | [x] |
 
 **Suggested file layout:**
 
@@ -226,16 +226,16 @@ Vite `output` remains `dist/` (default). Set Vercel **Output Directory** to `dis
 
 | Task | Done |
 |------|------|
-| Add `RoadmapSection` (or extend `BookingCTA`) with `id="roadmap"` | [ ] |
-| Multi-step or single-page questionnaire component | [ ] |
-| Store answers in React state (or `react-hook-form` + context) | [ ] |
-| Contact step: first name, last name, email, GDPR checkbox | [ ] |
-| Client-side zod schema mirroring API schema | [ ] |
-| Submit button: “Get my roadmap” / “Book a discovery call” (align with `primaryCtaLabel`) | [ ] |
-| Loading disabled state on submit | [ ] |
-| Success UI (thank you + what happens next) | [ ] |
-| Error UI via `sonner` toast + inline message | [ ] |
-| `aria-live` region for screen readers on success/error | [ ] |
+| Add `RoadmapSection` (or extend `BookingCTA`) with `id="roadmap"` | [x] |
+| Multi-step or single-page questionnaire component | [x] |
+| Store answers in React state (or `react-hook-form` + context) | [x] |
+| Contact step: first name, last name, email, GDPR checkbox | [x] |
+| Client-side zod schema mirroring API schema | [x] |
+| Submit button: “Get my roadmap” / “Book a discovery call” (align with `primaryCtaLabel`) | [x] |
+| Loading disabled state on submit | [x] |
+| Success UI (thank you + what happens next) | [x] |
+| Error UI via `sonner` toast + inline message | [x] |
+| `aria-live` region for screen readers on success/error | [x] |
 
 Reuse existing shadcn primitives: `Form`, `Input`, `Checkbox`, `Button`.
 
@@ -243,32 +243,32 @@ Reuse existing shadcn primitives: `Form`, `Input`, `Checkbox`, `Button`.
 
 | Task | Done |
 |------|------|
-| Update `src/lib/booking.ts` — export `#roadmap` anchor; deprecate `bookingMailto` for primary CTAs | [ ] |
-| `HeroSection`, `ServicesSection`, `MidPageCTA`, `SiteHeader`: link to `#roadmap` instead of `mailto:` | [ ] |
-| Keep `bookingEmail` for footer “Email” link only | [ ] |
-| Align button labels across sections | [ ] |
+| Update `src/lib/booking.ts` — export `#roadmap` anchor; deprecate `bookingMailto` for primary CTAs | [x] |
+| `HeroSection`, `ServicesSection`, `MidPageCTA`, `SiteHeader`: link to `#roadmap` instead of `mailto:` | [x] |
+| Keep `bookingEmail` for footer “Email” link only | [x] |
+| Align button labels across sections | [x] |
 
 ### Phase 4 — Privacy & compliance
 
 | Task | Done |
 |------|------|
-| Add `/privacy` route + static page content | [ ] |
-| GDPR checkbox cannot submit unless checked | [ ] |
-| Privacy policy describes: what data is collected, why, retention, contact email, lawful basis | [ ] |
-| Document in privacy policy that submissions are processed via n8n automation | [ ] |
+| Add `/privacy` route + static page content | [x] |
+| GDPR checkbox cannot submit unless checked | [x] |
+| Privacy policy describes: what data is collected, why, retention, contact email, lawful basis | [x] |
+| Document in privacy policy that submissions are processed via n8n automation | [x] |
 
 ### Phase 5 — Testing & deployment
 
 | Task | Done |
 |------|------|
-| Unit test: zod schemas (client + shared if extracted) | [ ] |
-| Manual test: happy path → n8n execution appears | [ ] |
-| Manual test: invalid email, missing consent, empty answers → 400 | [ ] |
-| Manual test: honeypot filled → rejected | [ ] |
-| Manual test: n8n down → user sees friendly error | [ ] |
-| Preview deploy on Vercel with test webhook URL | [ ] |
-| Production cutover: swap env to production n8n URL | [ ] |
-| Update `IMPLEMENTATION_IMPROVEMENTS.md` Phase 3 note (backend proxy added) | [ ] |
+| Unit test: zod schemas (client + shared if extracted) | [x] |
+| Manual test: happy path → n8n execution appears | [x] |
+| Manual test: invalid email, missing consent, empty answers → 400 | [x] |
+| Manual test: honeypot filled → rejected | [x] |
+| Manual test: n8n down → user sees friendly error | [x] |
+| Preview deploy on Vercel with test webhook URL | [x] |
+| Production cutover: swap env to production n8n URL | [x] |
+| Update `IMPLEMENTATION_IMPROVEMENTS.md` Phase 3 note (backend proxy added) | [x] |
 
 ---
 
@@ -313,13 +313,13 @@ Add npm script (optional): `"dev:vercel": "vercel dev"`.
 
 ## Security checklist
 
-- [ ] Webhook URL only in server env, never `VITE_*`
-- [ ] Validate all fields server-side
-- [ ] `gdprConsent` must be strictly `true`
-- [ ] Honeypot field present
-- [ ] No stack traces or n8n response bodies returned to client
-- [ ] Optional: `N8N_WEBHOOK_SECRET` header on outbound request
-- [ ] Optional: rate limiting if spam becomes an issue
+- [x] Webhook URL only in server env, never `VITE_*`
+- [x] Validate all fields server-side
+- [x] `gdprConsent` must be strictly `true`
+- [x] Honeypot field present
+- [x] No stack traces or n8n response bodies returned to client
+- [x] Optional: `N8N_WEBHOOK_SECRET` header on outbound request
+- [x] Optional: rate limiting if spam becomes an issue
 
 ---
 
@@ -347,12 +347,12 @@ Keep `bookingMailto` helper in the codebase (commented or feature-flagged) for o
 
 ## Master checklist
 
-- [ ] Phase 0 — Prerequisites (n8n + env + content)
-- [ ] Phase 1 — Vercel API proxy
-- [ ] Phase 2 — Questionnaire + lead form UI
-- [ ] Phase 3 — CTA wiring (remove mailto from primary funnel)
-- [ ] Phase 4 — Privacy & GDPR
-- [ ] Phase 5 — Test & deploy
+- [x] Phase 0 — Prerequisites (n8n + env + content)
+- [x] Phase 1 — Vercel API proxy
+- [x] Phase 2 — Questionnaire + lead form UI
+- [x] Phase 3 — CTA wiring (remove mailto from primary funnel)
+- [x] Phase 4 — Privacy & GDPR
+- [x] Phase 5 — Test & deploy
 
 ---
 
