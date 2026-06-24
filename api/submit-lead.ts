@@ -1,5 +1,30 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { submitLeadRequestSchema } from "../src/lib/lead-schema";
+import { z } from "zod";
+
+const roadmapAnswersSchema = z.object({
+  companySize: z.string().min(1),
+  role: z.string().min(1),
+  primaryChallenge: z.string().min(1),
+  timeline: z.string().min(1),
+});
+
+const submitLeadRequestSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required").max(100),
+  lastName: z.string().trim().min(1, "Last name is required").max(100),
+  email: z.string().trim().email("Enter a valid email address").max(254),
+  gdprConsent: z.literal(true, {
+    errorMap: () => ({ message: "You must agree to the privacy policy" }),
+  }),
+  answers: roadmapAnswersSchema,
+  metadata: z
+    .object({
+      source: z.string(),
+      submittedAt: z.string(),
+      pageUrl: z.string().optional(),
+    })
+    .optional(),
+  honeypot: z.string().optional(),
+});
 
 function getWebhookUrl(): string | undefined {
   return process.env.N8N_WEBOOK_URL ?? process.env.N8N_WEBHOOK_URL;
